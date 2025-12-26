@@ -13,8 +13,12 @@ import java.util.Locale;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println(formatNumber(1234567890L, Locale.US));
+     static void main() {
+        long number = 1234567890L;
+        Locale mexico = Locale.forLanguageTag("es-MX");
+        String result = formatNumber(number, mexico);
+
+        System.out.println(result);
     }
 
     public static String formatNumber(long number, Locale locale) {

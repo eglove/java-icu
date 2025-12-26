@@ -16,6 +16,13 @@ public class MainTest {
     }
 
     @Test
+    public void testFormatNumberMx() {
+        Locale mexico = Locale.forLanguageTag("es-MX");
+        assertEquals("mil doscientos treinta y cuatro millones quinientos sesenta y siete mil ochocientos noventa",
+                Main.formatNumber(1234567890L, mexico));
+    }
+
+    @Test
     public void testFormatNumberSmall() {
         assertEquals("five", Main.formatNumber(5L, Locale.US));
     }
